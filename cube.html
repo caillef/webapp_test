@@ -30,8 +30,8 @@
 			const animate = function () {
 				requestAnimationFrame( animate );
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
+				// cube.rotation.x += 0.01;
+				// cube.rotation.y += 0.01;
 
 				renderer.render( scene, camera );
 			};
@@ -44,7 +44,9 @@
                 console.log("Acceleration along the X-axis " + acl.x);
                 console.log("Acceleration along the Y-axis " + acl.y);
                 console.log("Acceleration along the Z-axis " + acl.z);
-                cube.rotation.y += acl.z / 1000
+                cube.rotation.x = acl.x
+                cube.rotation.y = acl.y
+                cube.rotation.z = acl.z
             });
 
             acl.start();
